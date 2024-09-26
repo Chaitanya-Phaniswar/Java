@@ -1,1 +1,1 @@
-## My Java Learning Path
+## Onto Becoming a Java Developer
