@@ -198,21 +198,58 @@ public class Patterns {
         System.out.println("Pattern 15");
         for (int i = 0; i < n; i++) {
             for (int j = n; j > i; j--) {
-                System.out.print((char)(65+n - j));
+                System.out.print((char) (65 + n - j));
             }
             System.out.println("");
         }
     }
 
     public static void pattern16(int n) {
-        System.out.println("Pattern 15");
+        System.out.println("Pattern 16");
         for (int i = 0; i < n; i++) {
             for (int j = n; j > i; j--) {
-                System.out.print((char)(65+i));
+                System.out.print((char) (65 + i));
             }
             System.out.println("");
         }
     }
+
+    public static void pattern17(int n) {
+        System.out.println("Pattern 17");
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            char ch = 'A';
+            int breakpoint = (2 * i + 1) / 2;
+            for (int j = 1; j <= 2 * i + 1; j++) {
+
+                System.out.print(ch);
+                if (j <= breakpoint)
+                    ch++;
+                else
+                    ch--;
+            }
+
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println();
+
+        }
+    }
+
+    public static void pattern18(int n) {
+        System.out.println("Pattern 18");
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i;j<n; j++) {
+                System.out.print((char) (65 + j));
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 
         pattern(5);
@@ -231,5 +268,7 @@ public class Patterns {
         pattern14(5);
         pattern15(5);
         pattern16(5);
+        pattern17(5);
+        pattern18(5);
     }
 }
